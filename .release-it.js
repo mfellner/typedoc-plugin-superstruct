@@ -1,4 +1,10 @@
 module.exports = {
+  plugins: {
+    "@release-it/conventional-changelog": {
+      preset: "conventionalcommits",
+      infile: "CHANGELOG.md",
+    },
+  },
   git: {
     // https://github.com/release-it/release-it/blob/15.2.0/docs/recipes/require-commits.md
     requireCommits: true,

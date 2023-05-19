@@ -19,6 +19,8 @@
   "author": "Maximilian Fellner <@mxfellner@toot.berlin>",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/config-conventional": "17.6.3",
+    "@release-it/conventional-changelog": "5.1.1",
     "outdent": "0.8.0",
     "prettier": "2.8.8",
     "release-it": "15.10.3",
