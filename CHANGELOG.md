@@ -1,3 +1,7 @@
+
+
+## [1.0.0](https://github.com/mfellner/typedoc-plugin-superstruct/compare/typedoc-plugin-superstruct@1.0.0-alpha.0...${npm.name}@1.0.0) (2023-05-19)
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
