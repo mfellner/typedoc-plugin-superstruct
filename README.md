@@ -1,28 +1,24 @@
-# typedoc-plugin-zod
+# typedoc-plugin-superstruct
 
-Improves display of types created with [Zod](https://github.com/colinhacks/zod)'s `z.infer` type.
+Improves display of types created with [Superstruct](https://github.com/ianstormtaylor/superstruct)'s `Infer` type.
+
+Based on the similar plugin [typedoc-plugin-zod](https://github.com/Gerrit0/typedoc-plugin-zod).
 
 ## Usage
 
-```bash
-npm install --save-dev typedoc-plugin-zod
+**Installation**
+
+```sh
+npm install --save-dev typedoc-plugin-superstruct
+# OR
+# yarn add -ED typedoc-plugin-superstruct
 ```
+
+**TypeDoc configuration**
 
 ```jsonc
 // typedoc.json
 {
-    "plugin": ["typedoc-plugin-zod"]
+    "plugin": ["typedoc-plugin-superstruct"]
 }
 ```
-
-See [an example](https://gerritbirkeland.com/typedoc-plugin-zod/types/Abc.html) of this plugin in action.
-
-## Change Log
-
-# v1.0.2
-
--   Update peer dependency to allow TypeDoc 0.24
-
-# v1.0.1
-
--   Add GitHub links to NPM package

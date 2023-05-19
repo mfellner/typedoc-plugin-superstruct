@@ -1,32 +1,52 @@
-import z from "zod";
+import {
+  array,
+  Infer,
+  number,
+  object,
+  optional,
+  string,
+  type,
+} from "superstruct";
 
 /**
  * An example zod object for demonstration. This is declared as:
  *
  * ```ts
- * export const abc = zod.object({
- *     prop: zod.string(),
- *     other: zod.object({
- *         arr: zod.array(zod.number()),
- *     }),
- *     opt: z.string().optional(),
+ * export const MyStruct = type({
+ *   prop: string(),
+ *   other: object({
+ *     arr: array(number()),
+ *   }),
+ *   opt: optional(string()),
  * });
  * ```
  */
-export const abc = z.object({
-    prop: z.string(),
-    other: z.object({
-        arr: z.array(z.number()),
-    }),
-    opt: z.string().optional(),
+export const MyStruct = type({
+  /**
+   * A string property.
+   */
+  prop: string(),
+  /**
+   * An object property.
+   */
+  other: object({
+    /**
+     * A nested array property.
+     */
+    arr: array(number()),
+  }),
+  /**
+   * This property is optional.
+   */
+  opt: optional(string()),
 });
 
 /**
- * Exported type alias which infers its type using the {@link abc} schema.
+ * Exported type alias which infers its type using the {@link MyStruct} schema.
  *
  * This is declared as:
  * ```ts
- * export type Abc = zod.infer<typeof abc>;
+ * export type MyType = Infer<typeof MyStruct>;
  * ```
  */
-export type Abc = z.infer<typeof abc>;
+export type MyType = Infer<typeof MyStruct>;
