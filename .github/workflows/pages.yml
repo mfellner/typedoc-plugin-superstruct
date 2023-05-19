@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: "18"
       - name: Install
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Build docs
-        run: npm run docs
+        run: yarn docs
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
